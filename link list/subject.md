@@ -7,3 +7,5 @@
 [24 两两交换链表中的节点](https://leetcode-cn.com/problems/swap-nodes-in-pairs/)
 
 [面试题 02.07. 链表相交](https://leetcode-cn.com/problems/intersection-of-two-linked-lists-lcci/)
+
+[142. 环形链表 II](https://leetcode-cn.com/problems/linked-list-cycle-ii/submissions/)
