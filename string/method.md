@@ -14,3 +14,8 @@ list(str)    # [char1,...,char_end]
  python 的list 是一个怪胎，元素可以是字符串。
 
 而C++ 的str，是不能作为一维数组的元素的，一维数组的元素只能是char
+
+```
+l_s = [...]
+l_s[0:len(s)-n].reverse() # 这样是创建了新的list了
+```
