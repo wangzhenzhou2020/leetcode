@@ -11,5 +11,6 @@ list(str)    # [char1,...,char_end]
 ''.join(list) # list->str
 ```
 
-# python 的list 是一个怪胎，元素可以是字符串。
-# 而C++ 的str，是不能作为一维数组的元素的，一维数组的元素只能是char
+ python 的list 是一个怪胎，元素可以是字符串。
+
+而C++ 的str，是不能作为一维数组的元素的，一维数组的元素只能是char
