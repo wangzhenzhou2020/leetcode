@@ -19,3 +19,8 @@ list(str)    # [char1,...,char_end]
 l_s = [...]
 l_s[0:len(s)-n].reverse() # 这样是创建了新的list了
 ```
+
+```
+list += []*n   # 没作用
+list += [None]*n  # 才行
+```
