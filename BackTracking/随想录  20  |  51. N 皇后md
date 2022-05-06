@@ -1,0 +1,49 @@
+[51. N 皇后](https://leetcode-cn.com/problems/n-queens/)
+```
+class Solution:
+    def __init__(self):
+        self.res = []
+    def solveNQueens(self, n: int) -> List[List[str]]:
+        # 因为不知道有多少中解法，所以直接for循环解不了
+
+        def backTracking(temp,forbid,layer):
+            if len(temp)==n:
+                self.res.append(temp[:])
+                return 
+            
+            used = forbid[layer]
+            for i in range(n):
+                if used[i]>0 : continue
+
+                used[i]+=1
+                right=i
+                left=i
+                for l in range(layer+1,n):
+                    forbid[l][i]+=1
+                    right+=1
+                    if right<n :forbid[l][right]+=1
+                    left-=1
+                    if left>=0: forbid[l][left]+=1
+                
+                q = '.'*i+'Q'+'.'*(max((n-i-1),0))
+                temp.append(q)
+                
+                backTracking(temp,forbid,layer+1)
+
+                temp.pop()
+                used[i]-=1
+                right=i
+                left=i
+                for l in range(layer+1,n):
+                    forbid[l][i]-=1
+                    right+=1
+                    if right<n :forbid[l][right]-=1
+                    left-=1
+                    if left>=0: forbid[l][left]-=1
+
+
+
+        forbid = [[0]*n for i in range(n)]
+        backTracking([],forbid,0)
+        return self.res
+```
