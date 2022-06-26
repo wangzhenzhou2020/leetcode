@@ -13,3 +13,14 @@
 
 977. 有序数组的平方
 
+209. 长度最小的子数组  (滑动窗口)
+```
+ while(sum<target){
+     end +=1;
+     if (end>=nums.length)
+         break; // 一个循环里如果有，那么后面就要当心退出的原因
+     sum += nums[end];
+     len +=1;
+
+ }
+```
