@@ -18,3 +18,15 @@
 
 135. 分发糖果  // 这个直接不会。随想录的题解不好理解。https://www.bilibili.com/video/BV1cS4y1z7so?spm_id_from=333.337.search-card.all.click&vd_source=8227479b71e61182247876d99eb8d179
 
+406. 根据身高重建队列  // 这尼玛也太难想了.数组本身就是对象
+```
+LinkedList<int[]> que = new LinkedList<>();
+        for(int[] p : people)
+            que.add(p[1],p);
+return que.toArray(new int[people.length][]);
+```
+
+452. 用最少数量的箭引爆气球  // 图画的不好，就做不出来！！！
+
+452. 用最少数量的箭引爆气球 // int 数据类型排序，不能直接return o1-o2, 有可能**溢出**！！
+
